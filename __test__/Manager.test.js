@@ -8,9 +8,9 @@ describe("Manager", () => {
                 "Mandy",
                 123,
                 "hello@email.com",
-                12345
+                1234567891
             );
-            expect(manager.getOfficeNumber()).toBe(12345);
+            expect(manager.getOfficeNumber()).toBe(1234567891);
         });
     });
 
@@ -20,7 +20,7 @@ describe("Manager", () => {
            "Maggie",
            456,
            "email@email.com",
-           12345
+           1234567891
          );
          expect(manager.getRole()).toBe("Manager");
        });
