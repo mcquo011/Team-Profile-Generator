@@ -1,19 +1,24 @@
 // Dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
+const OUTPUT_DIR = path.resolve(__dirname, "dist");
+const outputPath = path.join(OUTPUT_DIR, "index.html");
+const generateTeam = require("./src/template.js");
+
 
 // Constructors
-const Employee = require('./lib/Employee');
+const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const teamMembers = [];
+
 function initApp() {
-  const teamMembers = [];
 
   function addManager() {
-    inquirer
-      .prompt([
+    inquirer.prompt([
         // add questions specific to a manager
         {
           type: "input",
@@ -52,6 +57,7 @@ function initApp() {
         },
       ])
       .then((answers) => {
+        console.log(answers)
         const manager = new Manager(
           answers.managerName,
           answers.managerId,
@@ -60,12 +66,12 @@ function initApp() {
         );
         teamMembers.push(manager);
         addMoreMembers();
+      //  createTeam();
       });
   }
 
  function addMoreMembers() {
-   inquirer
-     .prompt([
+   inquirer.prompt([
        {
          type: "list",
          name: "addMore",
@@ -82,13 +88,12 @@ function initApp() {
            addIntern();
            break;
          default:
-           buildTeam(teamMembers);
+           buildHTML(teamMembers);
        }
      });
  }
   function addEngineer() {
-    inquirer
-      .prompt([
+    inquirer.prompt([
         // add questions specific to an engineer
         {
           type: "input",
@@ -147,6 +152,7 @@ function initApp() {
         );
         teamMembers.push(engineer);
         addMoreMembers();
+     //   createTeam();
       });
   }
 
@@ -192,7 +198,7 @@ function initApp() {
 
         {
           type: "input",
-          name: "internSchool",
+          name: "school",
           message: "What school does the Intern go to?",
           validate: (answer) => {
             if (answer === "") {
@@ -207,16 +213,21 @@ function initApp() {
           answers.internName,
           answers.internId,
           answers.internEmail,
-          answers.internSchool
+          answers.school
         );
         teamMembers.push(intern);
         addMoreMembers();
+       // createTeam();
       });
   }
   
+  function buildHTML() {
+    console.log(teamMembers)
+    fs.writeFileSync(outputPath, generateTeam(teamMembers), "utf-8")
+  }
 
-
-  addManager();
+ addManager();
+ 
 }
 
 initApp();
