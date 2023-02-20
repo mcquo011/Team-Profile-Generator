@@ -1,11 +1,17 @@
 {
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A simple CLI app to generate a team profile",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
   "dependencies": {
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
     "jest": "^27.4.7"
-  },
-  "scripts": {
-    "test": "jest"
   }
 }
+

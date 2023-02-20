@@ -76,7 +76,7 @@ function initApp() {
          type: "list",
          name: "addMore",
          message: "Would you like to add another team member?",
-         choices: ["Engineer", "Intern", "No"],
+         choices: ["Engineer", "Intern", "No, finish building team"],
        },
      ])
      .then((answer) => {

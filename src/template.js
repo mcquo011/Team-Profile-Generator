@@ -5,53 +5,53 @@ const team = generateTeam => {
   return `
  
  <div class="card" style="width: 18rem;">
-  <div class="card-body bg-dark">
-    <h5 class="card-title text-light">${manager.getName()}</h5>
-    <p class="text-light">Manager</p>
+  <div class="card-body custom-card border border-dark border-2">
+    <h5 class="card-title custom-text">${manager.getName()}</h5>
+    <p class="custom-text">Manager</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: ${manager.getId()}</li>
-    <li class="list-group-item">Email: ${manager.getEmail()}</li>
-    <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
+    <li class="list-group-item"><b>ID:</b> ${manager.getId()}</li>
+    <li class="list-group-item"><b>Email:</b> ${manager.getEmail()}</li>
+    <li class="list-group-item"><b>Office Number:</b> ${manager.getOfficeNumber()}</li>
   </ul>
-</div>`
+</div>`;
   }
 
 const engineerHTML = engineer => {
-  return`
+  return `
 <div class="card" style="width: 18rem;">
-  <div class="card-body bg-dark">
-    <h5 class="card-title text-white">${engineer.getName()}</h5>
-    <p class="text-light">Engineer</p>
+  <div class="card-body custom-card border border-dark border-2">
+    <h5 class="card-title custom-text">${engineer.getName()}</h5>
+    <p class="custom-text">Engineer</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: ${engineer.getId()}</li>
-    <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-    <li class="list-group-item">Github Username: ${engineer.getGithub()}</li>
+    <li class="list-group-item"><b>ID:</b> ${engineer.getId()}</li>
+    <li class="list-group-item"><b>Email:</b> ${engineer.getEmail()}</li>
+    <li class="list-group-item"><b>Github Username:</b> ${engineer.getGithub()}</li>
   </ul>
-</div> `
+</div> `;
 }
 
 const internHTML = intern => {
-return`
+return `
 <div class="card" style="width: 18rem;">
-  <div class="card-body bg-dark">
-    <h5 class="card-title text-white">${intern.getName()}</h5>
-    <p class="text-light">Intern</p>
+  <div class="card-body custom-card border border-dark border-2">
+    <h5 class="card-title custom-text">${intern.getName()}</h5>
+    <p class="custom-text">Intern</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: ${intern.getId()}</li>
-    <li class="list-group-item">Email: ${intern.getEmail()}</li>
-    <li class="list-group-item">School: ${intern.getSchool()}</li>
+    <li class="list-group-item"><b>ID:</b> ${intern.getId()}</li>
+    <li class="list-group-item"><b>Email:</b> ${intern.getEmail()}</li>
+    <li class="list-group-item"><b>School:</b> ${intern.getSchool()}</li>
   </ul>
-</div> `
+</div> `;
 }
 
 let managerArray = [];
 let engineerArray = [];
 let internArray = [];
 
-// your code for generating the team arrays here
+
 
 managerArray = generateTeam
   .filter((employee) => employee.getRole() === "Manager")
@@ -73,7 +73,6 @@ return html;
 module.exports = generateTeam => {
   const html = [];
 
-  // add the fixed HTML code for the page header
   html.push(`<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -83,12 +82,17 @@ module.exports = generateTeam => {
       <title>Team Profiles</title>
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
       <link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <nav class="navbar bg-danger">
+      <nav class="navbar navbar custom-navbar border-bottom border-dark border-2">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1 text-light">Team Profile Generator</span>
+      <span class="navbar-brand mb-0 h1 text-light custom-title">Team Profile Generator</span>
     </div>
   </nav> 
   

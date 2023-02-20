@@ -1,0 +1,26 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    background: linear-gradient(to right, #c9dfd7, #FFFFFF);
+
+;
+}
+
+.custom-navbar {
+    background-color: #7A9D96;
+    color: #eaecf4
+
+}
+
+.custom-card {
+    background-color: #00303F;
+}
+
+.custom-text {
+    color: #f4f4f9;
+}
+
+.custom-title {
+    font-size: 28px !important;
+
+}
+
