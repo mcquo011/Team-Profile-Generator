@@ -16,15 +16,17 @@ const teamMembers = [];
 function initApp() {
 
   function addManager() {
-    inquirer.prompt([
+    inquirer
+      .prompt([
         {
           type: "input",
           name: "managerName",
           message: "Please enter the team's manager's name.",
           validate: (answer) => {
             if (answer === "") {
-               return "You must enter the Manager's name!";
-            } return true
+              return "You must enter the Manager's name!";
+            }
+            return true;
           },
         },
         {
@@ -34,7 +36,8 @@ function initApp() {
           validate: (answer) => {
             if (answer === "") {
               return "Please enter a valid Id.";
-            } return true
+            }
+            return true;
           },
         },
         {
@@ -44,13 +47,23 @@ function initApp() {
           validate: (answer) => {
             if (answer === "") {
               return "Please enter a valid email.";
-            } return true;
+            } else if (!answer.includes("@")) {
+              return "Please enter a valid email address (must contain '@' symbol).";
+            }
+            return true;
           },
         },
+
         {
           type: "input",
           name: "managerOfficeNumber",
           message: "What's the manager's office number? (format: 7631112222)",
+          validate: (answer) => {
+             if (!/^\d+$/.test(answer)) {
+               return "Please enter a valid number.";
+             }
+             return true;
+          }
         },
       ])
       .then((answers) => {
@@ -118,10 +131,12 @@ function initApp() {
           name: "engineerEmail",
           message: "What's the Engineers's email?",
           validate: (answer) => {
-            if (answer === "") {
-              return "Please enter a valid email.";
-            }
-            return true;
+             if (answer === "") {
+               return "Please enter a valid email.";
+             } else if (!answer.includes("@")) {
+               return "Please enter a valid email address (must contain '@' symbol).";
+             }
+             return true;
           },
         },
 
@@ -182,10 +197,12 @@ function initApp() {
           name: "internEmail",
           message: "What's the Interns's email?",
           validate: (answer) => {
-            if (answer === "") {
-              return "Please enter a valid email.";
-            }
-            return true;
+             if (answer === "") {
+               return "Please enter a valid email.";
+             } else if (!answer.includes("@")) {
+               return "Please enter a valid email address (must contain '@' symbol).";
+             }
+             return true;
           },
         },
 
