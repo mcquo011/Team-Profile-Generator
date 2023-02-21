@@ -6,7 +6,7 @@ const team = generateTeam => {
  <div class="card" style="width: 18rem;">
   <div class="card-body custom-card border border-dark border-2">
     <h5 class="card-title custom-text">${manager.getName()}</h5>
-    <p class="custom-text">Manager</p>
+    <p class="custom-text"> 🗣 Manager</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><b>ID:</b> ${manager.getId()}</li>
@@ -21,7 +21,7 @@ const engineerHTML = engineer => {
 <div class="card" style="width: 18rem;">
   <div class="card-body custom-card border border-dark border-2">
     <h5 class="card-title custom-text">${engineer.getName()}</h5>
-    <p class="custom-text">Engineer</p>
+    <p class="custom-text"> 💡 Engineer</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><b>ID:</b> ${engineer.getId()}</li>
@@ -36,7 +36,7 @@ return `
 <div class="card" style="width: 18rem;">
   <div class="card-body custom-card border border-dark border-2">
     <h5 class="card-title custom-text">${intern.getName()}</h5>
-    <p class="custom-text">Intern</p>
+    <p class="custom-text"> ✏️ Intern</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><b>ID:</b> ${intern.getId()}</li>
