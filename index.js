@@ -1,4 +1,3 @@
-// Dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
@@ -7,7 +6,6 @@ const outputPath = path.join(OUTPUT_DIR, "index.html");
 const generateTeam = require("./src/template.js");
 
 
-// Constructors
 const Employee = require('./lib/Employee')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');

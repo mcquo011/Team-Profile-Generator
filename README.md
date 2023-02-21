@@ -1,7 +1,7 @@
 # Team Profile Generator 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-   [Walkthrough]()
+   [Walkthrough](https://watch.screencastify.com/v/WPVpixei7wHJemDjZdxe)
 
  ## Table of Contents 📑
 
