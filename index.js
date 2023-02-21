@@ -19,7 +19,6 @@ function initApp() {
 
   function addManager() {
     inquirer.prompt([
-        // add questions specific to a manager
         {
           type: "input",
           name: "managerName",
@@ -57,7 +56,6 @@ function initApp() {
         },
       ])
       .then((answers) => {
-        console.log(answers)
         const manager = new Manager(
           answers.managerName,
           answers.managerId,
@@ -66,7 +64,6 @@ function initApp() {
         );
         teamMembers.push(manager);
         addMoreMembers();
-      //  createTeam();
       });
   }
 
@@ -94,7 +91,6 @@ function initApp() {
  }
   function addEngineer() {
     inquirer.prompt([
-        // add questions specific to an engineer
         {
           type: "input",
           name: "engineerName",
@@ -152,14 +148,13 @@ function initApp() {
         );
         teamMembers.push(engineer);
         addMoreMembers();
-     //   createTeam();
       });
   }
 
   function addIntern() {
     inquirer
       .prompt([
-        // add questions specific to an intern
+        
         {
           type: "input",
           name: "internName",
@@ -217,12 +212,12 @@ function initApp() {
         );
         teamMembers.push(intern);
         addMoreMembers();
-       // createTeam();
+       
       });
   }
   
   function buildHTML() {
-    console.log(teamMembers)
+    console.log("Team generated!")
     fs.writeFileSync(outputPath, generateTeam(teamMembers), "utf-8")
   }
 
