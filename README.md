@@ -18,7 +18,9 @@
 
   The team profile generator app is a command-line interface (CLI) application that helps to generate a webpage that displays the members of a software engineering team. The app prompts the user to enter information about the manager, engineers, and interns of the team and generates an HTML file with a nicely formatted page displaying the team members' information, including their names, roles, IDs, email addresses, and specific information depending on their role.
 
-  The generated page uses Bootstrap CSS to make the cards with the team members' information look professional and visually appealing. The app is easy to use and saves time in generating a webpage for your team's profiles.
+  Building this application gave me experience with test driven development using Jest, and in addition, I also learned how to use express.js. Moving forward, these tools will help me tackle more difficult projects with greater ease and efficiency. 
+
+  Overall, the app is easy to use and saves time in generating a webpage for your team's profiles.
 
   ## Built with
 
