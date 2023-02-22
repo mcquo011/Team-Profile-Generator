@@ -63,7 +63,7 @@ Once the HTML file has been generated, you can open it in a web browser to view 
 
   ![Alt Text](./dist/images/Screen%20Shot%202023-02-20%20at%204.37.21%20PM.png?raw=true "screenshot of CLI")
 
-  ![Alt Text](./dist/images/Screen%20Shot%202023-02-21%20at%2011.09.47%20AM.png?raw=true "screenshot of team profile")
+  ![Alt Text](./dist/images/Screen%20Shot%202023-02-22%20at%2010.48.06%20AM.png?raw=true "screenshot of team profile")
 
   ## License 
   
